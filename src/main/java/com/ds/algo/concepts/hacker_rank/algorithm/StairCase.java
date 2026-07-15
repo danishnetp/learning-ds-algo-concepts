@@ -1,4 +1,4 @@
-package com.algo.hackerrank;
+package com.ds.algo.concepts.hacker_rank.algorithm;
 
 public class StairCase {
 

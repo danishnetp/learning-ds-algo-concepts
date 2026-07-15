@@ -1,4 +1,4 @@
-package org.example;
+package com.ds.algo.concepts;
 
 import org.junit.jupiter.api.Test;
 

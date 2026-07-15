@@ -1,4 +1,4 @@
-package org.example;
+package com.ds.algo.concepts;
 
 public class App {
     public static String greeting() {
