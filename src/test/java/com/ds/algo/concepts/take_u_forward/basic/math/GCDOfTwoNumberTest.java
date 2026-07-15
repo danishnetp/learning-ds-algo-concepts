@@ -28,5 +28,15 @@ class GCDOfTwoNumberTest {
     void throwsForBothZeros() {
         assertThrows(IllegalArgumentException.class, () -> GCDOfTwoNumber.gcd(0, 0));
     }
+
+    @Test
+    void handlesIntegerMinValueViaLongSafeMethod() {
+        assertEquals(2147483648L, GCDOfTwoNumber.gcdEuclidean(Integer.MIN_VALUE, 0));
+    }
+
+    @Test
+    void throwsOverflowForIntegerMinValueInIntApi() {
+        assertThrows(ArithmeticException.class, () -> GCDOfTwoNumber.gcd(Integer.MIN_VALUE, 0));
+    }
 }
 
