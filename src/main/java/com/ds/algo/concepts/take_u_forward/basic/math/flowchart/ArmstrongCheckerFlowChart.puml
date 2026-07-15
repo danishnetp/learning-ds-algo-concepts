@@ -1,0 +1,34 @@
+@startuml
+' Flowchart for ArmstrongChecker.isArmstrong(int number)
+title Armstrong Number Check - Optimized Flow
+
+start
+
+:Input number;
+
+if (number < 0?) then (yes)
+  :return false;
+  stop
+else (no)
+endif
+
+:digits = countDigits(number);
+:powers[0..9] = precompute digit^digits;
+:temp = number;
+:sum = 0;
+
+repeat
+  :digit = temp % 10;
+  :sum = sum + powers[digit];
+  :temp = temp / 10;
+repeat while (temp != 0?) is (yes)
+
+if (sum == number?) then (yes)
+  :return true;
+else (no)
+  :return false;
+endif
+
+stop
+@enduml
+

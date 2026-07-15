@@ -11,11 +11,13 @@ class ArmstrongCheckerTest {
     void returnsTrueForKnownArmstrongNumbers() {
         assertTrue(ArmstrongChecker.isArmstrong(0));
         assertTrue(ArmstrongChecker.isArmstrong(1));
+        assertTrue(ArmstrongChecker.isArmstrong(9));
         assertTrue(ArmstrongChecker.isArmstrong(153));
         assertTrue(ArmstrongChecker.isArmstrong(370));
         assertTrue(ArmstrongChecker.isArmstrong(371));
         assertTrue(ArmstrongChecker.isArmstrong(407));
         assertTrue(ArmstrongChecker.isArmstrong(1634));
+        assertTrue(ArmstrongChecker.isArmstrong(9474));
     }
 
     @Test
