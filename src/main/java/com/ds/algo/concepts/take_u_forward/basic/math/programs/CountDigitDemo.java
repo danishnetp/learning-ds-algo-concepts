@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.take_u_forward.basic.math;
+package com.ds.algo.concepts.take_u_forward.basic.math.programs;
 
 /**
  * Demonstrates two approaches for counting the number of digits in an integer.

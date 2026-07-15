@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.take_u_forward.basic.math;
+package com.ds.algo.concepts.take_u_forward.basic.math.programs;
 
 public class ArmstrongChecker {
 
