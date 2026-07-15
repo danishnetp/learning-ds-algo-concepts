@@ -1,0 +1,27 @@
+@startuml
+' Flowchart for GCDOfTwoNumber.gcd(int a, int b)
+title GCD Of Two Numbers - Euclidean Algorithm
+
+start
+
+:Input a, b;
+:x = abs(a);
+:y = abs(b);
+
+if (x == 0 and y == 0?) then (yes)
+  :throw IllegalArgumentException;
+  stop
+else (no)
+endif
+
+while (y != 0?) is (yes)
+  :remainder = x % y;
+  :x = y;
+  :y = remainder;
+endwhile (no)
+
+:return x;
+stop
+
+@enduml
+
