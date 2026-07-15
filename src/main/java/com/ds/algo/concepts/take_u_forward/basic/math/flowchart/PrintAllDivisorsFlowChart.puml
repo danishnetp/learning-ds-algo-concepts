@@ -1,34 +1,34 @@
 @startuml
-' Flowchart for PrintAllDivisors.getAllDivisors(int number)
-title Print All Divisors - Square Root Optimization
+' Flowchart for PrintAllDivisors.getDivisors(int N)
+title Print All Divisors - Optimal Square Root Approach
 
 start
 
-:Input number;
+:Input N;
 
-if (number <= 0?) then (yes)
+if (N <= 0?) then (yes)
   :Throw IllegalArgumentException;
   stop
 else (no)
 endif
 
-:Initialize lowerDivisors = [];
-:Initialize upperDivisors = [];
+:Initialize lower = [];
+:Initialize upper = [];
 :i = 1;
 
-while ((long)i * i <= number?) is (yes)
-  if (number % i == 0?) then (yes)
-    :Add i to lowerDivisors;
-    :pair = number / i;
+while ((long)i * i <= N?) is (yes)
+  if (N % i == 0?) then (yes)
+    :Add i to lower;
+    :pair = N / i;
     if (pair != i?) then (yes)
-      :Add pair to upperDivisors;
+      :Add pair to upper;
     endif
   endif
   :i = i + 1;
 endwhile (no)
 
-:Append upperDivisors in reverse order to lowerDivisors;
-:return lowerDivisors;
+:Append upper in reverse order to lower;
+:return lower;
 stop
 
 @enduml
