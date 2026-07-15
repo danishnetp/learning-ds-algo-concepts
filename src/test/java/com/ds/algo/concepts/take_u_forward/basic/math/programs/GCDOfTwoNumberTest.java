@@ -1,6 +1,5 @@
-package com.ds.algo.concepts.take_u_forward.basic.math;
+package com.ds.algo.concepts.take_u_forward.basic.math.programs;
 
-import com.ds.algo.concepts.take_u_forward.basic.math.programs.GCDOfTwoNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -5,25 +5,19 @@ import java.util.*;
 public class PrintAllDivisors {
     // Function to get all divisors
     public List<Integer> getDivisors(int N) {
-        // Create a list to store divisors
-        List<Integer> res = new ArrayList<>();
+        // Use TreeSet to keep divisors unique and sorted.
+        Set<Integer> divisors = new TreeSet<>();
 
         // Loop from 1 to square root of N
         for (int i = 1; i * i <= N; i++) {
             // Check if i divides N
             if (N % i == 0) {
-                // Add i to result
-                res.add(i);
-
-                // If N / i is different from i, add N / i too
-                if (i != N / i) {
-                    res.add(N / i);
-                }
+                divisors.add(i);
+                divisors.add(N / i);
             }
         }
 
-        // Return the list of divisors
-        return res;
+        return new ArrayList<>(divisors);
     }
 
     public static void main(String[] args) {

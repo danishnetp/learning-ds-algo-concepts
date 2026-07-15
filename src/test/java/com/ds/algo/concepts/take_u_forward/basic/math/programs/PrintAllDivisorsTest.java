@@ -10,13 +10,13 @@ class PrintAllDivisorsTest {
 
 	@Test
 	void returnsAllDivisorsForCompositeNumber() {
-		assertEquals(List.of(1, 12, 2, 6, 3, 4), new PrintAllDivisors().getDivisors(12));
+		assertEquals(List.of(1, 2, 3, 4, 6, 12), new PrintAllDivisors().getDivisors(12));
 	}
 
 	@Test
 	void returnsAllDivisorsForPerfectSquareWithoutDuplication() {
-		assertEquals(List.of(1, 28, 2, 14, 4, 7), new PrintAllDivisors().getDivisors(28));
-		assertEquals(List.of(1, 36, 2, 18, 3, 12, 4, 9, 6), new PrintAllDivisors().getDivisors(36));
+		assertEquals(List.of(1, 2, 4, 7, 14, 28), new PrintAllDivisors().getDivisors(28));
+		assertEquals(List.of(1, 2, 3, 4, 6, 9, 12, 18, 36), new PrintAllDivisors().getDivisors(36));
 	}
 
 	@Test
