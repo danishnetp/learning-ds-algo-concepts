@@ -34,7 +34,7 @@ import java.util.List;
  *   <li>Space: O(n) for output list in worst case (no overlaps).</li>
  * </ul>
  */
-public class MergeIntervalsSimple {
+public class MergeIntervalsOverlapping {
     /**
      * Runs a sample input and prints merged result.
      * JVM entry point signature must be: public static void main(String[] args).
