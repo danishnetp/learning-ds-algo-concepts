@@ -1,0 +1,45 @@
+@startuml UltraEfficientDuplicates
+
+!define ARROW_COLOR #333333
+skinparam arrowColor ARROW_COLOR
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #FFFFFF
+skinparam classBorderColor #000000
+skinparam activityBackgroundColor #E3F2FD
+skinparam activityBorderColor #1976D2
+
+start
+:Start: findDuplicates1
+Input: int[] nums;
+:Initialize empty
+List duplicates;
+
+if (nums == null or nums.length < 2?) then (Yes)
+  :Return duplicates;
+  stop
+else (No)
+endif
+
+:Sort input array
+Arrays.sort(nums);
+:Initialize loop:
+i = 1;
+
+while (i < nums.length?)
+  if (nums[i] == nums[i - 1]?) then (Yes)
+    if (duplicates is empty or last != nums[i]?) then (Yes)
+      :Add nums[i] to
+      duplicates list;
+    else (No)
+    endif
+  else (No)
+  endif
+
+  :Increment i;
+endwhile
+
+:Return duplicates list;
+stop
+
+@enduml
+
