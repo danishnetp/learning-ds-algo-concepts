@@ -1,6 +1,5 @@
-package com.ds.algo.concepts.questions;
+package com.ds.algo.concepts.ask_questions;
 
-import com.ds.algo.concepts.questions.program.ZeroSumSubarray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

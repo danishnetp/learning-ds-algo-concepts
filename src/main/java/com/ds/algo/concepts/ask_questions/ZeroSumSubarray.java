@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.questions.program;
+package com.ds.algo.concepts.ask_questions;
 
 import java.util.Arrays;
 import java.util.HashMap;

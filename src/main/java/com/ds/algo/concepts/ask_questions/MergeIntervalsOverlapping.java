@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.questions.cgi;
+package com.ds.algo.concepts.ask_questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;

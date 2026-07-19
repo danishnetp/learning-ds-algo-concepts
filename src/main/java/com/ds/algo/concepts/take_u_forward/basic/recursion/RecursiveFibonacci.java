@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.take_u_forward.basic.math.programs;
+package com.ds.algo.concepts.take_u_forward.basic.recursion;
 
 public class RecursiveFibonacci {
 
@@ -11,9 +11,9 @@ public class RecursiveFibonacci {
 
         // Recursive case: calculate previous two terms
         int last = fibonacci(N - 1);    // (N-1)th term
-        int slast = fibonacci(N - 2);   // (N-2)th term
+        int secondLast = fibonacci(N - 2);   // (N-2)th term
 
-        return last + slast;
+        return last + secondLast;
     }
 
     public static void main(String[] args) {
