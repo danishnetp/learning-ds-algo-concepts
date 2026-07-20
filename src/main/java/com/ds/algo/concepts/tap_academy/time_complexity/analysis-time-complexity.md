@@ -102,8 +102,24 @@ for (int i = 1; i <= n; i++) {
 ```
 
 - Outer loop condition check: `n + 1` times
+
+  Outer loop `i <= n` is checked once per iteration plus one extra time when it fails.
+
 - Inner loop condition check: `n * (n + 3) / 2` times
+
+  For each row `i`, the condition `j <= i` is checked `i + 1` times (i runs plus 1 failed check).
+  
+  Total = `sum(i + 1)` for `i = 1 to n`
+  
+  = `(1 + 2 + ... + n) + n = n(n+1)/2 + n = (n² + 3n)/2 = n(n+3)/2`
+
 - `System.out.print("* ")`: `n * (n + 1) / 2` times
+
+  Print happens exactly for each inner loop execution.
+  
+  Total = `sum(i)` for `i = 1 to n = 1 + 2 + ... + n = n(n+1)/2`
+  
+  The **`/2`** comes from the triangular-number sum formula.
 
 Total time complexity:
 
