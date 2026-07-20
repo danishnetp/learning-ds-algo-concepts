@@ -1,4 +1,6 @@
-# Analysis for Loop Time Complexity
+# Analysis of Time Complexity
+
+## Analysis for Loop Time Complexity
 
 ```java
 for (int i = 0; i < n; i++) {
@@ -19,7 +21,7 @@ Big-O notation:
 
 Note: when getting the final value, we remove constant terms and keep the higher-order term.
 
-# Analysis for Nested Loop Time Complexity
+## Analysis for Nested Loop Time Complexity
 
 ```java
 for (int i = 0; i < n; i++) {
@@ -35,7 +37,24 @@ for (int i = 0; i < n; i++) {
 
 Total time complexity:
 
-`(n + 1) + n * (n + 1) + n * n = 2n^2 + 2n + 1`
+`(n + 1) + n * (n + 1) + n * n = n + 1 + n^2 + n + n^2 = 2n^2 + 2n + 1`
+
+Graph of above time-complexity:
+
+```text
+Operations
+^
+|                                *
+|                          *
+|                    *
+|              *
+|        *
+|   *
++--------------------------------------> n
+    1    2    3    4    5    6
+
+Curve shown: y = n^2
+```
 
 Big-O notation:
 
@@ -43,9 +62,9 @@ Big-O notation:
 
 
 
-# Analysis for Nested 3 Loop Time Complexity
+## Analysis for Nested 3 Loop Time Complexity
 
-Example: multiplication of 2D array
+### Example: multiplication of 2D array
 
 ```java
 for (int i = 0; i < n; i++) {
