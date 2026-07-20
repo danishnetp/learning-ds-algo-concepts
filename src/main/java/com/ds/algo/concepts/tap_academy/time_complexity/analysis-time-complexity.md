@@ -43,20 +43,23 @@ Total time complexity:
 
 Constant and lower-order terms are eliminated, so the final time complexity is `n^2`.
 
-
 Big-O notation:
 
 `O(n^2)`
 
 ## Analysis for Nested 3 Loop Time Complexity
 
-### Example: Multiplication of a 2D Array
+### Example: Multiplication of Two 2D Arrays
 
 ```java
+int[][] a = new int[n][n];
+int[][] b = new int[n][n];
+int[][] result = new int[n][n];
+
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
         for (int k = 0; k < n; k++) {
-            System.out.println(i + ", " + j + ", " + k);
+            result[i][j] += a[i][k] * b[k][j];
         }
     }
 }
@@ -65,11 +68,13 @@ for (int i = 0; i < n; i++) {
 - Outer loop condition check: `n + 1` times
 - Middle loop condition check: `n * (n + 1)` times
 - Inner loop condition check: `n * n * (n + 1)` times
-- `System.out.println(i + ", " + j + ", " + k)`: `n * n * n` times
+- `result[i][j] += a[i][k] * b[k][j]`: `n * n * n` times
 
 Total time complexity:
 
 `(n + 1) + n * (n + 1) + n * n * (n + 1) + n * n * n = n + 1 + n^2 + n + n^3 + n^2 + n^3 = 2n^3 + 2n^2 + 2n + 1`
+
+Constant and lower-order terms are eliminated, so the final time complexity is `n^3`.
 
 Big-O notation:
 
