@@ -79,3 +79,39 @@ Constant and lower-order terms are eliminated, so the final time complexity is `
 Big-O notation:
 
 `O(n^3)`
+
+## Analysis for Star Pattern Time Complexity
+
+Pattern:
+
+```text
+*
+* *
+* * *
+* * * *
+
+```
+
+```java
+for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= i; j++) {
+        System.out.print("* ");
+    }
+    System.out.println();
+}
+```
+
+- Outer loop condition check: `n + 1` times
+- Inner loop condition check: `n * (n + 3) / 2` times
+- `System.out.print("* ")`: `n * (n + 1) / 2` times
+
+Total time complexity:
+
+`(n + 1) + n * (n + 3) / 2 + n * (n + 1) / 2 = n^2 + 3n + 1`
+
+Constant and lower-order terms are eliminated, so the final time complexity is `n^2`.
+
+Big-O notation:
+
+`O(n^2)`
+
