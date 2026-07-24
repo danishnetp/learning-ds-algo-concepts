@@ -18,7 +18,7 @@ flowchart TD
     K --> L{i < A.length?}
     L -- no --> W{maxLength > 0?}
 
-    L -- yes --> M[currentSum = currentSum + A[i]]
+    L -- yes --> M["currentSum = currentSum + A[i]"]
     M --> N{currentSum == 0?}
 
     N -- yes --> O[maxLength = i + 1]
