@@ -5,7 +5,7 @@ flowchart TD
     A([Start]) --> B[Input array A]
     B --> C{A == null or\nA.length == 0?}
 
-    C -- yes --> D[return empty array []]
+    C -- yes --> D["return empty array []"]
     D --> E([Stop])
 
     C -- no --> F[Initialize map = HashMap<Integer, Integer>]
@@ -42,7 +42,7 @@ flowchart TD
 
     W -- yes --> X[return Arrays.copyOfRange(A, startIdx, endIdx + 1)]
     X --> Y([Stop])
-    W -- no --> Z[return empty array []]
+    W -- no --> Z["return empty array []"]
     Z --> Y
 ```
 
