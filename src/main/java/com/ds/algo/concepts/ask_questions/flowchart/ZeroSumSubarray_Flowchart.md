@@ -2,47 +2,47 @@
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[Input array A]
-    B --> C{A == null or\nA.length == 0?}
+    A([Start]) --> B[Input array]
+    B --> C{Array is null or empty}
 
-    C -- yes --> D["return empty array []"]
+    C -->|Yes| D[Return empty array]
     D --> E([Stop])
 
-    C -- no --> F[Initialize map = HashMap<Integer, Integer>]
-    F --> G[currentSum = 0]
-    G --> H[maxLength = 0]
-    H --> I[startIdx = -1]
-    I --> J[endIdx = -1]
-    J --> K[i = 0]
+    C -->|No| F[Initialize prefix sum map]
+    F --> G[Set currentSum to 0]
+    G --> H[Set maxLength to 0]
+    H --> I[Set startIdx to -1]
+    I --> J[Set endIdx to -1]
+    J --> K[Set i to 0]
 
-    K --> L{i < A.length?}
-    L -- no --> W{maxLength > 0?}
+    K --> L{More elements left}
+    L -->|No| W{Found any zero sum subarray}
 
-    L -- yes --> M["currentSum = currentSum + A[i]"]
-    M --> N{currentSum == 0?}
+    L -->|Yes| M[Add current value to currentSum]
+    M --> N{Is currentSum zero}
 
-    N -- yes --> O[maxLength = i + 1]
-    O --> P[startIdx = 0]
-    P --> Q[endIdx = i]
-    Q --> V[i = i + 1]
+    N -->|Yes| O[Set maxLength to i plus 1]
+    O --> P[Set startIdx to 0]
+    P --> Q[Set endIdx to i]
+    Q --> V[Increment i]
 
-    N -- no --> R{map contains currentSum?}
-    R -- no --> S[map.put(currentSum, i)]
+    N -->|No| R{currentSum seen before}
+    R -->|No| S[Store currentSum at index i]
     S --> V
 
-    R -- yes --> T[prevIdx = map.get(currentSum)]
-    T --> U{(i - prevIdx) > maxLength?}
-    U -- yes --> U1[maxLength = i - prevIdx]
-    U1 --> U2[startIdx = prevIdx + 1]
-    U2 --> U3[endIdx = i]
+    R -->|Yes| T[Get previous index for currentSum]
+    T --> U{New subarray is longer}
+    U -->|Yes| U1[Set maxLength to i minus prevIdx]
+    U1 --> U2[Set startIdx to prevIdx plus 1]
+    U2 --> U3[Set endIdx to i]
     U3 --> V
-    U -- no --> V
+    U -->|No| V
 
     V --> L
 
-    W -- yes --> X[return Arrays.copyOfRange(A, startIdx, endIdx + 1)]
+    W -->|Yes| X[Return subarray from startIdx to endIdx]
     X --> Y([Stop])
-    W -- no --> Z["return empty array []"]
+    W -->|No| Z[Return empty array]
     Z --> Y
 ```
 
