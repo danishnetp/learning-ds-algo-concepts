@@ -12,7 +12,7 @@ import java.util.Map;
  *   <li>a printable pair representation for demonstration purposes.</li>
  * </ul>
  */
-public class TwoSumPromblem {
+public class TwoSumProblem {
     /**
      * Demonstrates both {@link #twoSum(int[], int)} and {@link #twoSum1(int[], int)}.
      *

@@ -85,13 +85,12 @@ public class MergeIntervalsOverlapping {
         result.add(newInterval);
 
         // Step 2: Traverse all intervals and merge when overlap is found.
-        for(int[] interval : intervals){
+        for (int[] interval : intervals) {
             // Overlap condition: interval starts before or at active interval end.
-            if(interval[0] <= newInterval[1]){
+            if (interval[0] <= newInterval[1]) {
                 // Extend active interval end to cover both intervals.
                 newInterval[1] = Math.max(newInterval[1], interval[1]);
-            }
-            else{
+            } else {
                 // No overlap: start a new active interval.
                 newInterval = interval;
                 result.add(newInterval);
