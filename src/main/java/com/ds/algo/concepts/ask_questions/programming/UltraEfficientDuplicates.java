@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.ask_questions;
+package com.ds.algo.concepts.ask_questions.programming;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package com.ds.algo.concepts.ask_questions.cgi;
 
-import com.ds.algo.concepts.ask_questions.MergeIntervalsOverlapping;
+import com.ds.algo.concepts.ask_questions.programming.MergeIntervalsOverlapping;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

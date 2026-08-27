@@ -1,5 +1,6 @@
 package com.ds.algo.concepts.ask_questions;
 
+import com.ds.algo.concepts.ask_questions.programming.MinimumTimeToInfectServers;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

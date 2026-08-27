@@ -1,4 +1,4 @@
-package com.ds.algo.concepts.ask_questions;
+package com.ds.algo.concepts.ask_questions.programming;
 
 public class MaximumSubarraySum {
     public static void main(String[] args) {
