@@ -2,7 +2,7 @@ package com.ds.algo.concepts.ask_questions.programming;
 
 public class MaximumSubarraySum {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 1, 7, 8};
+        int[] arr = {-2, -4};
         maximumSubarraySum(arr);
     }
     private static void maximumSubarraySumOptimal(int[] arr) {
