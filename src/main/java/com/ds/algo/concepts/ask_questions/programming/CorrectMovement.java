@@ -1,5 +1,11 @@
 package com.ds.algo.concepts.ask_questions.programming;
+/*
+Q: Question:
+Possible Move R, L, U, D
 
+Compressed Input: U2(RULD)
+Output: URURU
+ */
 public class CorrectMovement {
     public static void main(String[] args) {
         String input = "UUDDLRLR";
